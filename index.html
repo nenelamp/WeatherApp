@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Weather app</title>
+  <script src="/script.js" defer></script>
+
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+
+  <a href="#main" class="visually-hidden skip-link">Skip to main content</a>
+
+    <header class="header wrapper">
+      <div class=" header_content">
+        <a class="header_homelink" href="/">
+        <img class="header_logo" src="/assets/images/logo.svg" alt="Weather Now Home" width="197" height="40">
+        </a>
+
+        <select class="dropdown header_dropdown" name="units" id="ddlUnits">
+          <option value="">Units</option>
+          <option value="C">&deg;C</option>
+          <option value="F">&deg;F</option>
+        </select> 
+      </div>
+    </header>
+
+
+  <main id="main" class="main wrapper">
+
+    <section class="hero ">
+      <div class="hero_content">
+        <h1 class="hero_title"> How's the sky looking today? </h1>
+
+        <div class="hero_search">
+          <input class="hero_textbox" type="text" name="search" id="txtSearch" placeholder="Search for a place...">
+          <button id="btnSearch" class="hero_button" type="submit">Search </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="dashboard">
+        <section class="current ">
+          <h2 class="visually-hidden">Current Location Temperature</h2>
+          
+          <div class="current_weather">
+              <div class="current_location">
+                <div id="dvCityCountry" class="current_city">Berlin Germany</div>
+                <div id="dvCurrDate" class="current_date">Tuesday, Aug 5, 2025</div>  
+            </div>
+            <div class="current_info">
+              <img class="current_icon" src="/assets/images/icon-sunny.webp" alt="" width="320" height="320">
+              <div id="dvCurrTemp" class="current_temp"><span>20</span>&deg;</div>
+            </div>
+          </div>
+
+            <div class="current_conditions">
+              <div class="block current_condition">
+                  <p class="current_condition-title">Feels Like</p>
+                  <p id="pFeelsLike" class="current_condition-value">18&deg;</p>
+              </div>
+              <div class="block current_condition">
+                  <p class="current_condition-title">Humidity</p>
+                  <p id="pHumidity" class="current_condition-value">46%</p>
+              </div>
+              <div class="block current_condition">
+                  <p class="current_condition-title">Wind</p>
+                  <p id="pWind" class="current_condition-value">20</p>
+              </div>
+              <div class="block current_condition">
+                  <p class="current_condition-title">Precipitation</p>
+                  <p id="pPrecipitation" class="current_condition-value">10 mm</p>
+              </div>
+            </div>
+        </section>
+
+        <section class="daily ">
+          <h2 class="section_title daily_title">Daily forecast</h2>
+          <div class="daily_forecast">
+            <div id="dvForecastDay1" class="block daily_day"></div>
+            <div id="dvForecastDay2" class="block daily_day"></div>
+            <div id="dvForecastDay3" class="block daily_day"></div>
+            <div id="dvForecastDay4" class="block daily_day"></div>
+            <div id="dvForecastDay5" class="block daily_day"></div>
+            <div id="dvForecastDay6" class="block daily_day"></div>
+            <div id="dvForecastDay7" class="block daily_day"></div>
+          </div>
+        </section>
+
+        <section class="hourly ">
+          <div class="hourly_content">
+            <div class="hourly_header">
+              <h2 class="section_title hourly_title">Hourly forecast</h2>
+              <select class="hourly_select" name="hourly_select" id="ddlDay"></select>
+            </div>
+
+            <div class="hourly_hours">
+              <div id="dvForecastHour1" class="hourly_hour"></div>
+              <div id="dvForecastHour2" class="hourly_hour"></div>
+              <div id="dvForecastHour3" class="hourly_hour"></div>
+              <div id="dvForecastHour4" class="hourly_hour"></div>
+              <div id="dvForecastHour5" class="hourly_hour"></div>
+              <div id="dvForecastHour6" class="hourly_hour"></div>
+              <div id="dvForecastHour7" class="hourly_hour"></div>
+              <div id="dvForecastHour8" class="hourly_hour"></div>
+              <div id="dvForecastHour9" class="hourly_hour"></div>
+              <div id="dvForecastHour10" class="hourly_hour"></div>
+              <div id="dvForecastHour11" class="hourly_hour"></div>
+              <div id="dvForecastHour12" class="hourly_hour"></div>
+              <div id="dvForecastHour13" class="hourly_hour"></div>
+              <div id="dvForecastHour14" class="hourly_hour"></div>
+              <div id="dvForecastHour15" class="hourly_hour"></div>
+              <div id="dvForecastHour16" class="hourly_hour"></div>
+              <div id="dvForecastHour17" class="hourly_hour"></div>
+              <div id="dvForecastHour18" class="hourly_hour"></div>
+              <div id="dvForecastHour19" class="hourly_hour"></div>
+              <div id="dvForecastHour20" class="hourly_hour"></div>
+              <div id="dvForecastHour21" class="hourly_hour"></div>
+              <div id="dvForecastHour22" class="hourly_hour"></div>
+              <div id="dvForecastHour23" class="hourly_hour"></div>
+              <div id="dvForecastHour24" class="hourly_hour"></div>
+            </div>
+          </div>
+        </section>
+    </div>
+ 
+
+
+  </main>
+
+
+
+
+
+  <!-- <h1>HELLO WHATS GOOOD</h1>
+  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore itaque voluptas, veritatis, deleniti obcaecati nemo iusto laudantium vitae consequuntur ipsa voluptate soluta voluptatum autem modi quod mollitia rerum. Impedit, eos.</P> -->
+
+  <!-- Units
+
+  Switch to Imperial/Metric
+
+  Temperature
+
+  Celsius (°C)
+  Fahrenheit (°F)
+
+  Wind Speed
+
+  km/h
+  mph
+
+  Precipitation
+
+  Millimeters (mm)
+  Inches (in)
+
+  How's the sky looking today?
+
+  Search for a city, e.g., New York
+  Search
+
+  Feels like
+  
+
+  Humidity
+  
+  Wind
+    
+  
+  Precipitation
+ 
+
+  Daily forecast
+
+
+  Hourly forecast
+  Insert hourly forecast for the selected day here -->
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
